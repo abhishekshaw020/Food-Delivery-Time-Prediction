@@ -65,7 +65,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## 📧 Contact
-For any queries, reach out to: [your-email@example.com](mailto:abhishaw020@gmail.com)
+For any queries, reach out to: [abhishaw020@gmail.com](mailto:abhishaw020@gmail.com)
 
 ### 🐳 Docker Image
 ```sh
