@@ -1,12 +1,13 @@
 # Delivery Time Prediction
 
 ## 📸 Screenshots
+### Enter Details to get Delivery Time:
+![image](https://github.com/user-attachments/assets/082d655a-a98a-48bb-a520-066e2508593d)
 
 ### Enter Details and Click on Predict
 ![image](https://github.com/user-attachments/assets/9679fd86-2031-43e2-b681-ee2a5ddc9490)
 
-### Prediction Result
-![image](https://github.com/user-attachments/assets/082d655a-a98a-48bb-a520-066e2508593d)
+
 
 ---
 
@@ -71,5 +72,5 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 ---
 
 ## 📧 Contact
-For any queries, reach out to: [your-email@example.com](mailto:your-email@example.com)
+For any queries, reach out to: [your-email@example.com](mailto:abhishaw020@gmail.com)
 
