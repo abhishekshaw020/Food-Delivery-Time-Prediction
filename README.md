@@ -18,7 +18,7 @@
 │   └── index.html          
 ├── static/                 # CSS, JS, images  
 ├── model/                  
-│   └── regression_model.joblib  # Trained ML model  
+│   └── regression__model.joblib  # Trained ML model  
 ├── data/                   
 │   └── X_train.csv         # Training dataset  
 ├── ml_helper.py            # Data processing functions  
@@ -60,9 +60,6 @@ http://127.0.0.1:5000/
 - 📁 Pre-trained model stored using Joblib
 
 ---
-
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
