@@ -1,33 +1,75 @@
-Screenshots:
-![image](https://github.com/user-attachments/assets/082d655a-a98a-48bb-a520-066e2508593d)
+# Delivery Time Prediction
 
-Enter Details and Click on Predict:
+## 📸 Screenshots
+
+### Enter Details and Click on Predict
 ![image](https://github.com/user-attachments/assets/9679fd86-2031-43e2-b681-ee2a5ddc9490)
 
-Project Structure:
+### Prediction Result
+![image](https://github.com/user-attachments/assets/082d655a-a98a-48bb-a520-066e2508593d)
+
+---
+
+## 📂 Project Structure
+```
 ├── app.py                  # Flask application code  
 ├── templates/              # HTML templates for UI  
-│   └── index.html           
+│   └── index.html          
 ├── static/                 # CSS, JS, images  
 ├── model/                  
 │   └── regression_model.joblib  # Trained ML model  
 ├── data/                   
-│   └── X_train.csv          # Training dataset  
-├── ml_helper.py             # Data processing functions  
-├── README.md                # Project documentation  
-└── requirements.txt         # Required dependencies  
+│   └── X_train.csv         # Training dataset  
+├── ml_helper.py            # Data processing functions  
+├── README.md               # Project documentation  
+└── requirements.txt        # Required dependencies  
+```
 
-🚀 How to Run the Project
-Clone the repository:
+---
 
+## 🚀 How to Run the Project
+
+### 1️⃣ Clone the repository
+```sh
 git clone https://github.com/yourusername/delivery-time-prediction.git
 cd delivery-time-prediction
-Install dependencies:
+```
 
+### 2️⃣ Install dependencies
+```sh
 pip install -r requirements.txt
-Run the Flask application:
+```
 
+### 3️⃣ Run the Flask application
+```sh
 python app.py
-Open the app in your browser:
+```
 
+### 4️⃣ Open the app in your browser
+```
 http://127.0.0.1:5000/
+```
+
+---
+
+## 📌 Features
+- 📊 Predicts delivery time based on input details
+- 🛠️ Machine Learning model for regression analysis
+- 🌐 Simple UI built with Flask and HTML/CSS
+- 📁 Pre-trained model stored using Joblib
+
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📧 Contact
+For any queries, reach out to: [your-email@example.com](mailto:your-email@example.com)
+
