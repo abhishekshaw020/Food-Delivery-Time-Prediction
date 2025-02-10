@@ -7,8 +7,6 @@
 ### Enter Details and Click on Predict
 ![image](https://github.com/user-attachments/assets/9679fd86-2031-43e2-b681-ee2a5ddc9490)
 
-
-
 ---
 
 ## 📂 Project Structure
@@ -32,7 +30,7 @@
 
 ### 1️⃣ Clone the repository
 ```sh
-git clone https://github.com/yourusername/delivery-time-prediction.git
+git clone https://github.com/yourusername/food-delivery-time-prediction.git
 cd delivery-time-prediction
 ```
 
@@ -68,4 +66,9 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📧 Contact
 For any queries, reach out to: [your-email@example.com](mailto:abhishaw020@gmail.com)
+
+### 🐳 Docker Image
+```sh
+docker pull abhishaw020/food_del
+```
 
