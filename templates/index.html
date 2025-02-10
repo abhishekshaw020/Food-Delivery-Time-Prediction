@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Time Prediction</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            display: flex;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: #ffffff;
+            padding: 20px 15px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: fixed;
+            height: 100%;
+            font-size: 14px;
+        }
+
+        .profile {
+            margin-bottom: 15px;
+        }
+
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            object-fit: cover;
+            margin-bottom: 8px;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin: 8px 0 5px;
+            font-weight: bold;
+        }
+
+        .sidebar p {
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 22px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #3498db;
+            transform: scale(1.1);
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 270px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        h3 {
+            text-align: center;
+            color: #27ae60;
+        }
+
+        /* Animation - Delivery Truck */
+        .delivery-truck {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 100px;
+            animation: moveTruck 3s linear infinite;
+        }
+
+        @keyframes moveTruck {
+            0% {
+                transform: translateX(-200%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile">
+            <h3>Abhishek Shaw</h3>
+            <p>Data Science Enthusiast</p>
+        </div>
+        <p>Hi, I'm Abhishek Shaw! Passionate about solving real-world problems using data science. Explore my work:</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/abhishaw020/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/abhishekshaw020" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.kaggle.com/abhishekshaw020" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Delivery Time Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="distance"><i class="fas fa-road"></i> Distance (km):</label>
+            <input type="number" id="distance" name="distance" step="0.1" required>
+
+            <label for="pre_time"><i class="fas fa-clock"></i> Preparation Time (mins):</label>
+            <input type="number" id="pre_time" name="pre_time" step="1" required>
+
+            <label for="weather"><i class="fas fa-cloud-sun"></i> Weather Condition:</label>
+            <select id="weather" name="weather" required>
+                <option value="Clear">Clear</option>
+                <option value="Windy">Windy</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Foggy">Foggy</option>
+            </select>
+
+            <label for="traffic"><i class="fas fa-traffic-light"></i> Traffic Level:</label>
+            <select id="traffic" name="traffic" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="vehicle"><i class="fas fa-motorcycle"></i> Vehicle Type:</label>
+            <select id="vehicle" name="vehicle_type" required>
+                <option value="Bike">Bike</option>
+                <option value="Scooter">Scooter</option>
+                <option value="Car">Car</option>
+            </select>
+
+            <label for="timeofday"><i class="fas fa-sun"></i> Time of Day:</label>
+            <select id="timeofday" name="timeofday" required>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select>
+
+            <button type="submit">Predict</button>
+
+            <!-- Delivery Truck Animation -->
+        </form>
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+</html>
